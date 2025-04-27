@@ -2,6 +2,11 @@ import requests
 
 from settings import api_key, city
 
+if not api_key:
+    raise ValueError("API key is not set.")
+if not city:
+    raise ValueError("City is not set.")
+
 
 def get_weather() -> None:
     weather_url = "https://api.weatherapi.com/v1/current.json"
