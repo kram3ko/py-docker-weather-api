@@ -3,7 +3,7 @@ import requests
 from settings import api_key, city
 
 
-def get_weather():
+def get_weather() -> None:
     weather_url = "https://api.weatherapi.com/v1/current.json"
     params = {"key": api_key, "q": city}
     response = requests.get(weather_url, params=params)
