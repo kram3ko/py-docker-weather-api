@@ -2,8 +2,7 @@ FROM python:3.13-alpine
 LABEL maintainer="volodymyr.vinohradov@gmail.com"
 
 ENV PYTHONUNBUFFERED=1
-ENV VIRTUAL_ENV=/app/.venv
-ENV PATH="/app/.venv/bin:$PATH"
+ENV UV_PROJECT_ENVIRONMENT="/usr/local/"
 
 WORKDIR /app
 COPY pyproject.toml uv.lock ./
